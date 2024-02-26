@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-button {
+    background-color: #1DB954;
+
+
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #1ED760;
+    /* Slightly darker shade for hover effect */
+}
+
+
+.home-button {
+    background-color: #1DB954;
+
+    position: absolute;
+    top: 10px;
+    /* Adjust as needed */
+    left: 10px;
+    /* Adjust as needed */
+    /* Other button styles... */
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 60px;
+    /* Adjust based on header height */
+    text-align: center;
+    background-color: #A0A0A0;
+    color: #000000;
+
+    padding-bottom: auto;
+    /* Adjust this value to the height of your footer */
+}
+
+.header-class {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #727272;
+    z-index: 1000;
+    height: 80px;
+    text-align: center;
+    /* Add additional styling as needed */
+}
+
+main {
+    padding-bottom: 40px;
+    /* Space for the footer */
+    padding-top: 40px;
+}
+
+
+
+.footer-class {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+    height: 60px;
+
+    /* Height can be adjusted as needed */
+
+}
+
+.centered {
+    position: relative;
+    margin-top: 20px;
+    /* Adjust as needed */
+    width: 100%;
+    /* Other styling as needed */
+    padding-top: 40px;
+
+}
+
+.centered-text {
+    width: 50%;
+    margin: auto;
+    /* Centers the div */
+    padding: 60px;
+    text-align: center;
+    /* Centers the text inside the div */
+    max-width: 50%;
+    /* Maximum width of the text */
+
+}
+
+input[type=text],
+button {
+
+    margin: 10px;
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+
+}
+
+.submit-button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto;
+}
+
+.submit-button:hover {
+    background-color: #1ED760;
+}
+
+/* Add other styles as needed */
+.track-info p {
+    padding-top: 60px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+
+    /* Adjust padding as needed */
+    /* Add other styling properties as needed */
+}
+
+.track-info p:first-child {
+    color: #000000;
+
+    /* Optional: Makes the first paragraph (track title) bold */
+}
+
+.album-cover {
+
+    width: 60vw;
+    /* 30% of the viewport width */
+    max-width: 450px;
+    /* maximum size */
+    height: auto;
+
+
+}
+
+.back-button {
+    background-color: #4CAF50;
+    /* Change this to your desired color */
+    color: #FFFFFF;
+    /* This is the text color */
+    /* Add other styling properties as needed */
+}
+
+.back-button {
+    background-color: #1DB954;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto;
+
+}
+
+.back-button:hover {
+    background-color: #1ED760;
+    /* Slightly darker shade when hovered */
+}
+
+.sitemap {
+    /* Style for the sitemap section */
+    font-size: 20px;
+}
+
+/* Unvisited link */
+a:link {
+    color: #89CFF0;
+    /* Replace with your desired color */
+}
+
+/* Visited link */
+a:visited {
+    color: #e4e4e4;
+    /* Replace with your desired color */
+}
+
+/* Mouse over link */
+a:hover {
+    color: #FFA07A;
+    /* Replace with your desired color */
+}
+
+/* Selected link */
+a:active {
+    color: green;
+    /* Replace with your desired color */
+}
+
+input[type="text"],
+.submit-button {
+    width: 50%;
+    /* Adjust as needed */
+    margin: 10px auto;
+    /* Top and bottom margin with automatic horizontal margins */
+    min-width: 100px;
+    /* Ensures each element takes its own line */
+}
+
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Adjust if necessary */
+    width: 100%;
+    /* Ensures it takes the full width */
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Other existing styles */
+}
+
+.header-class {
+    margin: 0;
+    /* Remove padding if it's not needed */
+    /* Other existing styles */
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    min-height: 100vh;
+    /* Viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    /* Takes up all available space */
+}
+
+.songs-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    /* Space between each song */
+}
+
+.high-danceability-songs {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* Adjust 'auto' for album cover size */
+    gap: 10px;
+    /* Space between album cover and text */
+}
+
+.album-cover {
+    width: auto;
+    max-width: 300px;
+    /* Full width of the container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.song-details {
+    color: #000000;
+    /* Additional styling for text details if needed */
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    /* Add any other styling you need */
+}
+
+/* Base styles */
+/* Add your existing styles here */
+
+/* Media query for devices up to 600px wide */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .home-button {
+        padding: 12px 24px;
+        /* Increase padding for better touch interaction */
+        font-size: 14px;
+        /* Adjust button font size for readability */
+    }
+
+    .header-class {
+        padding-top: 20px;
+        /* Adjust header padding */
+    }
+
+    /* Add more responsive adjustments as needed */
+}

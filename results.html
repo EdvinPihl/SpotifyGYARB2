@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Other head elements -->
+</head>
+
+<body>
+    <header class="header-class">
+        <h1>Welcome to IsItDanceable?</h1>
+        <a href="/" class="home-button">Home</a>
+    </header>
+
+    <main>
+        <div class="track-info">
+            <p>Track: {{ track['name'] }}</p>
+            {% if track['artists'] %}
+            <p>Artist: {{ track['artists'][0]['name'] }}</p>
+            {% endif %}
+            <!-- Rest of your content -->
+        </div>
+
+        <div class="centered">
+            <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="album-cover">
+            <!-- Other elements -->
+
+            <p>Danceability:
+                {% if features['danceability'] <= 0.25 %} Bad {% elif features['danceability'] <=0.5 %} Okay {% elif
+                    features['danceability'] <=0.75 %} Good {% else %} Perfect {% endif %}={{ features['danceability']
+                    }} </p>
+
+                    <p>Energy:
+                        {% if features['energy'] <= 0.25 %} Bad {% elif features['energy'] <=0.5 %} Okay {% elif
+                            features['energy'] <=0.75 %} Good {% else %} Perfect {% endif %}={{ features['energy']
+                            }}</p>
+
+
+                            <a href="{{ track['external_urls']['spotify'] }}" target="_blank" class="song-link">Link to
+                                Song</a>
+
+                            <br>
+                            <button class="back-button" onclick="location.href='/'">Back to Search</button>
+
+        </div>
+    </main>
+    <footer class="footer-class">
+        <a href="/">Home</a> |
+        <a href="/about">About Us</a> |
+        <a href="/sitemap">Sitemap</a> |
+        <a href="/example-results">Example Results</a>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotify Song Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function allowOnlyLettersAndSpaces(event) {
+            var charCode = event.which ? event.which : event.keyCode;
+            if ((charCode > 31 && charCode < 65) || (charCode > 90 && charCode < 97) || charCode > 122) {
+                event.preventDefault();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header-class">
+        <h1>Welcome to IsItDanceable?</h1>
+        <a href="/" class="home-button">Home</a>
+    </header>
+
+    <main>
+        <div class="centered">
+            <form action="/search" method="post">
+                <input type="text" name="song" placeholder="Song" maxlength="30"
+                    onkeypress="return allowOnlyLettersAndSpacesAndNumbers(event)">
+                <input type="text" name="artist" placeholder="Artist (optional)" maxlength="30"
+                    onkeypress="return allowOnlyLettersAndSpacesAndNumbers(event)">
+                <button type="submit" class="submit-button">Search</button>
+            </form>
+        </div>
+        <h2 class="section-title">Today's Top Hits</h2>
+        <div class="songs-container">
+            {% for track in top_tracks %}
+            <div class="high-danceability-songs">
+                <div class="album-info">
+                    <img src="{{ track.album.images[0].url }}" alt="Album Cover" class="album-cover">
+                    <div class="song-details">
+                        <p>Track: {{ track.name }}</p>
+                        <p>Artist: {{ track.artists[0].name }}</p>
+                        {% if track.features %}
+                        <p>Danceability:
+                            {% if track.features['danceability'] <= 0.25 %} Bad {% elif track.features['danceability']
+                                <=0.5 %} Okey {% elif track.features['danceability'] <=0.75 %} Good {% else %} Perfect
+                                {% endif %}={{ track.features['danceability'] }} </p>
+                                <p>Energy:
+                                    {% if track.features['energy'] <= 0.25 %} Bad {% elif track.features['energy'] <=0.5
+                                        %} Okey {% elif track.features['energy'] <=0.75 %} Good {% else %} Perfect {%
+                                        endif %}={{ track.features['energy'] }} </p>
+                                        {% else %}
+                                        <p>Audio features not available.</p>
+                                        {% endif %}
+                                        <!-- Add more track details here -->
+                                        <a href="{{ track.external_urls.spotify }}" target="_blank"
+                                            class="song-link">Link to Song</a>
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </main>
+
+    <footer class="footer-class">
+        <a href="/">Home</a> |
+        <a href="/about">About Us</a> |
+        <a href="/sitemap">Sitemap</a> |
+        <a href="/example-results">Example Results</a>
+    </footer>
+</body>
+
+</html>
